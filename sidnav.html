@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+#sidnav{
+    background-color: rgb(13, 162, 212);
+    width: 300px;
+    height: 100%;
+position: fixed;
+right: -300px;
+top: 0;
+transition: 2s;
+}
+#close{
+    background-color: red;
+    border-radius: 50%;
+    border-color: red;
+    padding: 4px 6px;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+    <section id="sidnav"><button onclick="closenav()" id="close">x</button></section>
+    <button onclick="opennav()">open  nav</button>
+<script>
+    let opennav=function(){
+        document.getElementById('sidnav').style.right =0
+    }
+    let closenav=function(){
+        document.getElementById('sidnav').style.right ='-300px'
+    }
+</script>
+</body>
+</html>
