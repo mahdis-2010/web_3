@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 5px 10px;
+background-color: tomato;
+color: white;
+        }
+    </style>
+</head>
+<body>
+    <span id="h"></span>  :  <span id="m"></span> :<span id="s"></span>:<span id="ms"></span>
+  
+  <div>
+    <button onclick="startchmeter()">start</button>
+    <button onclick="stopchmeter()">stop  </button>
+  </div>
+    
+    
+    <script>
+        let h=0, m=0,s=0,ms=0;
+        function chmeter(){
+            document.getElementById('h').innerText=(h<10)?`0${h}`:h;
+            document.getElementById('m').innerText=(m<10)?`0${m}`:m;
+            document.getElementById('s').innerText=(s<10)?`0${s}`:s;
+            document.getElementById('ms').innerText=(ms<10)?`0${ms}`:ms;
+        }
+        chmeter();
+        let stopwhatch=null;
+        function startchmeter(){
+            let stopwhatch=setInterval(countchmeter,1)
+
+        }
+        function stopchmeter(){
+   clearInterval(stopwhatch)
+        }
+        function countchmeter(){
+            ms++;
+            if(ms>100){
+                ms=0;
+                s++;
+            }
+            if(s>60){
+                s=0;
+                m++;
+            }
+            chmeter();
+        }
+    </script>
+</body>
+</html>
