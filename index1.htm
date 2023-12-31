@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  #username{
+
+    width: 30%;
+    position: relative;
+    padding: 5px;
+    display: flex;
+    background-color: rgba(173, 216, 230, 0.54);
+  }
+  #openusername{
+    position: absolute;
+    top: 5px;
+    padding: 10px;
+ left: 430px;
+
+   
+  }
+  #hideusername{
+    position: absolute;
+    top: 5px;
+    padding: 10px;
+ left: 430px;
+
+   
+  }
+</style>
+
+</head>
+<body>
+    <div>
+ <input type="password" id="username">
+ <i class="fa fa-eye" aria-hidden="true" id="openusername"></i>
+ <i class="fa fa-eye-slash" aria-hidden="true" id="hideusername"></i>
+    </div>
+    <script>
+document.getElementById('openusername').onclick=function(){
+    document.getElementById('username').type='text'
+    document.getElementById('hideusername').style.display='inline'
+    document.getElementById('openusername').style.display='none'
+}
+document.getElementById('hideusername').onclick=function(){
+    document.getElementById('username').type='password'
+    document.getElementById('hideusername').style.display='none'
+    document.getElementById('openusername').style.display='inline'
+}
+    </script>
+</body>
+</html>
