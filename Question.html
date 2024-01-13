@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            border-bottom: 1px solid lightgray;
+            padding: 10px 20px;
+            box-shadow: rgba(0, 0, 0, 0.053) 0px 1px 4px;
+            width: 50%;
+            right: 0;
+        }
+        .answer{display: none;}
+    </style>
+</head>
+<body dir="rtl">
+    <p class="question">آیا این دوره پیش نیاز دارد؟</p>
+<p class="answer">خیر شما بدون هیچ پیش نیازی از صفر شروع میکنید</p>
+<p class="question">چگونه به ما اعتماد کنید؟</p>
+<p class="answer">شما میتوانید با رفتن به صفحه رضایت رضایت مشتری را ببینید</p>
+<p class="question">آیا این دوره برای افراد حرفه ای مناسب است؟</p>
+<p class="answer">خیر این دوره برای افراد مبتدی است</p>
+<p class="question">آیا این دوره پشتیبانی دارد؟</p>
+<p class="answer">بله متخصصان 24 ساعته درخدمت شما هستند</p>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+   
+
+    $(document).ready(function(){
+        $('.question').click(function(){
+            $(this).next().slideToggle(2000);
+        }
+       
+        )
+    })
+</script>
+</body>
+</html>
